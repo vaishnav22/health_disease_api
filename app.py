@@ -59,14 +59,14 @@ def predict():
 	for i in range(0,len(l1)):
 		l2.append(0)
 
-	# request_json = request.get_json()
-	# data = request_json['input']
+	request_json = request.get_json()
+	data = request_json['input']
 	# print(data)
 
-	psymptoms = ['back_pain','weakness_in_limbs','neck_pain','dizziness','loss_of_balance']
+	# psymptoms = ['back_pain','weakness_in_limbs','neck_pain','dizziness','loss_of_balance']
 
 	for k in range(0,len(l1)):
-		for z in psymptoms:
+		for z in data:
 			if(z==l1[k]):
 				l2[k]=1
 
